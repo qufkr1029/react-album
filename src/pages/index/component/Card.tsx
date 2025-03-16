@@ -11,7 +11,7 @@ function Card({ data, handleDialog, handleSetData }: Props) {
     const openDialog = () => {
         handleDialog(true)
         handleSetData(data)
-        console.log('data', data)
+        console.log('data: ', data)
     }
 
     return (

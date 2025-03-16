@@ -17,7 +17,7 @@ function index() {
     const imgSelector = useRecoilValueLoadable(imageData)
     const [imgData, setImgData] = useState<CardDTO>()
     const [open, setOpen] = useState<boolean>(false) // 이미지 상세 다이얼로그 발생(상태) state
-
+        
     const CARD_LIST = useMemo(() => {
         if (imgSelector.state === 'hasValue') {
             const res = imgSelector.contents.results.map((card: CardDTO) => {
@@ -29,7 +29,7 @@ function index() {
 
         }
     }, [imgSelector])
-
+    
     return (
         <div className={styles.page}>
             {/* 공통헤더 UI 부분 */}
@@ -39,9 +39,9 @@ function index() {
             <div className={styles.page__contents}>
                 <div className={styles.page__contents__introBox}>
                     <div className={styles.wrapper}>
-                        <span className={styles.wrapper__title}>PhotoSplash</span>
+                        <span className={styles.wrapper__title}>PunSplash</span>
                         <span className={styles.wrapper__desc}>
-                            인터넷 시각 자료 출처입니다.<br />
+                            UnSplash 인터넷 시각 자료 출처입니다.<br />
                             모든 지역에 있는 크리에이터들의 지원을 받습니다.
                         </span>
                         {/* 검색할 UI 부분 */}

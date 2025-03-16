@@ -1,6 +1,6 @@
-## React Basic 강의 콘텐츠: Unsplash Image API를 활용한 이미지 검색 사이트 만들기
+## React Basic 콘텐츠: Unsplash Image API를 활용한 이미지 검색 사이트 구축
 
-### 개발환경
+### 개발환경 설정
 
 1.  프로젝트 환경설정(vite를 활용한 React 설치): `npm install vite@latest` <br />
 

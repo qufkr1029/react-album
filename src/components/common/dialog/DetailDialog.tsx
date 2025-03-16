@@ -52,7 +52,6 @@ function DetailDialog({ data, handleDialog }: Props) {
 
         // esc 키 눌렀을 때 다이얼로그 닫기
         const escKeyDownCloseDialog = (event: any) => {
-            console.log('함수 호출')
             if (event.key === 'Escape') {
                 closeDialog()
             }
@@ -118,13 +117,16 @@ function DetailDialog({ data, handleDialog }: Props) {
                         </div>
                     </div>
                     <div className={styles.tagBox}>
-                        {data.tags && data.tags.map((tag: Tag) => {
+                        <div className={styles.tagBox__tag} key={data.description}>
+                            {data.user.name}
+                        </div>
+                        {/* {data.tags && data.tags.map((tag: Tag) => {
                             return (
                                 <div className={styles.tagBox__tag} key={tag.title}>
                                     {tag.title}
                                 </div>
                             )
-                        })}
+                        })} */}
                     </div>
                 </div>
             </div>

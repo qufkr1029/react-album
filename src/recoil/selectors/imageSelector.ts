@@ -12,10 +12,12 @@ export const imageData = selector({
     get: async ({ get }) => {
         const serachValue = get(searchState)
         const pageValue = get(pageState)
+        const requestURL = `${API_URL}?query=${serachValue}&client_id=${API_KEY}&page=${pageValue}&per_page=${PER_PAGE}`
 
         // API 호출
         try {
-            const res = await axios.get(`${API_URL}?query=${serachValue}&client_id=${API_KEY}&page=${pageValue}&per_page=${PER_PAGE}`)
+            const res = await axios.get(requestURL)
+            console.log('axious 호출 res: ', res)
             return res.data
             
         } catch (error) {
